@@ -7,18 +7,18 @@ const getEnvVar = (key: string): string => {
 };
 
 export const ENV = {
-  API_KEY: getEnvVar('API_KEY'),
-  API_URL: getEnvVar('API_URL'),
-  SECRET_CODE: getEnvVar('SECRET_CODE'),
-  DEFAULT_DDD: getEnvVar('DEFAULT_DDD')
+  API_KEY: getEnvVar('VITE_API_KEY'),
+  API_URL: getEnvVar('VITE_API_URL'),
+  SECRET_CODE: getEnvVar('VITE_SECRET_CODE'),
+  DEFAULT_DDD: getEnvVar('VITE_DEFAULT_DDD')
 } as const;
 
 // Tipos para as variáveis de ambiente
 declare global {
   interface ImportMetaEnv {
-    API_KEY: string;
-    API_URL: string;
-    SECRET_CODE: string;
-    DEFAULT_DDD: string;
+    VITE_API_KEY: string;
+    VITE_API_URL: string;
+    VITE_SECRET_CODE: string;
+    VITE_DEFAULT_DDD: string;
   }
 }

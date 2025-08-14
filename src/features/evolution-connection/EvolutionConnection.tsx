@@ -5,7 +5,6 @@ import { SecretCodeStep } from './components/SecretCodeStep';
 import { UserDetailsStep } from './components/UserDetailsStep';
 import { QrCodeStep } from './components/QrCodeStep';
 import { ConnectionLog } from './components/ConnectionLog';
-import { SuccessAnimation } from './components/SuccessAnimation';
 
 export function EvolutionConnection() {
   const {
@@ -14,9 +13,7 @@ export function EvolutionConnection() {
     handlers,
     logs,
     qrCode,
-    isConnected,
-    instanceName,
-    addLog
+    isConnected
   } = useEvolutionConnection();
 
   return (
@@ -55,8 +52,6 @@ export function EvolutionConnection() {
           <div className="bg-black backdrop-blur-sm rounded-lg p-6 border border-white/10">
             <ConnectionLog
               logs={logs}
-              instanceName={instanceName}
-              addLog={addLog}
             />
           </div>
         </div>

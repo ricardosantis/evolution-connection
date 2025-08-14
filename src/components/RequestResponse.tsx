@@ -1,6 +1,6 @@
 interface RequestResponseProps {
-  request: any;
-  response: any;
+  request: unknown;
+  response: unknown;
 }
 
 export function RequestResponse({ request, response }: RequestResponseProps) {

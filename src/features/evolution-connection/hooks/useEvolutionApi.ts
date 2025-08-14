@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import { ENV } from '@/config/env';
 import type { LogEntry } from '@/types';
+import type { FormState } from '../types';
 
 interface UseEvolutionApiProps {
   addLog: (message: string, type?: LogEntry['type']) => void;
@@ -20,7 +21,7 @@ export function useEvolutionApi({ addLog, setStep, onInstanceCreated }: UseEvolu
     }
   };
 
-  const handleSubmit = async (formState: any) => {
+  const handleSubmit = async (formState: FormState) => {
     if (!formState.firstName || !formState.lastName || !formState.phone || formState.phone.length !== 9) {
       addLog('Por favor, preencha todos os campos corretamente', 'error');
       return;

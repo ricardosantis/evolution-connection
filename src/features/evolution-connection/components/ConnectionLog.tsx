@@ -5,11 +5,9 @@ import type { LogEntry } from '@/types';
 
 interface ConnectionLogProps {
   logs: LogEntry[];
-  instanceName: string | null;
-  addLog: (message: string, type: LogEntry['type'], replace?: boolean) => void;
 }
 
-export function ConnectionLog({ logs, instanceName, addLog }: ConnectionLogProps) {
+export function ConnectionLog({ logs }: ConnectionLogProps) {
   const logContainerRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {

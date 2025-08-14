@@ -2,7 +2,7 @@ import { ENV } from '@/config/env';
 
 interface ApiOptions {
   method?: string;
-  body?: any;
+  body?: unknown;
 }
 
 export async function api<T>(endpoint: string, options: ApiOptions = {}): Promise<T> {

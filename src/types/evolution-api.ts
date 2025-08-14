@@ -28,10 +28,10 @@ export interface EvolutionApiResponse {
     status: string;
   };
   hash: string;
-  webhook: Record<string, any>;
-  websocket: Record<string, any>;
-  rabbitmq: Record<string, any>;
-  sqs: Record<string, any>;
+  webhook: Record<string, unknown>;
+  websocket: Record<string, unknown>;
+  rabbitmq: Record<string, unknown>;
+  sqs: Record<string, unknown>;
   settings: {
     rejectCall: boolean;
     msgCall: string;
