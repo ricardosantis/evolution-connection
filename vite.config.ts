@@ -8,6 +8,16 @@ export default defineConfig(({ mode }) => {
 
   return {
     plugins: [react()],
+    server: {
+      host: '0.0.0.0',
+      port: 12000,
+      strictPort: true,
+      cors: true,
+      allowedHosts: ['work-1-jugatdbepogoeehb.prod-runtime.all-hands.dev', 'localhost'],
+      headers: {
+        'X-Frame-Options': 'ALLOWALL',
+      },
+    },
     resolve: {
       alias: {
         '@': path.resolve(__dirname, './src'),
